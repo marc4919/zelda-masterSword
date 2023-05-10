@@ -1,0 +1,121 @@
+body {
+  background-color: black;
+  font-family: "VT323", monospace;
+  color: white;
+  text-align: center;
+}
+
+.animate__fadeInUp {
+  --animate-duration: 1s;
+}
+
+a {
+  color: white;
+}
+
+#sword {
+  width: 112px;
+  position: absolute;
+  top: 200px;
+  filter: brightness(0.2);
+  transition: top 0.5s ease;
+}
+
+#pedestal {
+  width: 168px;
+  position: absolute;
+  top: 450px;
+  filter: brightness(0.2);
+}
+
+#light {
+  width: 250px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-bottom: 510px solid white;
+  filter: brightness(0);
+}
+
+@keyframes changeBrightnessSword {
+  0% {
+    filter: brightness(0.2);
+  }
+  100% {
+    filter: brightness(0.9);
+  }
+}
+
+@keyframes changeBrightnessPedestal {
+  0% {
+    filter: brightness(0.2);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
+}
+
+@keyframes changeBrightnessLight {
+  0% {
+    filter: brightness(0);
+  }
+  100% {
+    filter: brightness(0.6);
+  }
+}
+
+.animate-sword {
+  animation: changeBrightnessSword 3s ease forwards;
+  animation-delay: 7s;
+}
+
+.animate-pedestal {
+  animation: changeBrightnessPedestal 3s ease forwards;
+  animation-delay: 7s;
+}
+
+.animate-light {
+  animation: changeBrightnessLight 4s ease forwards;
+  animation-delay: 6.5s;
+}
+
+#container {
+  margin-top: 100px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 550px;
+}
+
+#box-item {
+  display: flex;
+  visibility: hidden;
+  flex-direction: row;
+  background-color: rgb(6, 6, 170, 0.7);
+  border-radius: 20px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+#box-item img {
+  width: 110px;
+  transform: rotate(10deg);
+}
+
+#box-item div {
+  width: 70%;
+  text-align: left;
+}
+
+#box-item h1 {
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+#playButton {
+  color: white;
+  margin-top: 350px;
+}
