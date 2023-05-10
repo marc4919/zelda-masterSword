@@ -100,6 +100,19 @@ a {
   padding: 20px;
 }
 
+@media only screen and (max-width: 440px) {
+  #box-item {
+    height: 100px;
+  }
+  #box-item h1 {
+    font-size: 20px;
+    margin-top: 2px;
+  }
+  #box-item p {
+    margin-top: 2px;
+  }
+}
+
 #box-item img {
   width: 110px;
   transform: rotate(10deg);
